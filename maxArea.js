@@ -16,6 +16,12 @@ var maxArea = function(height){
     let max = 1
     let area
 
+    if (height.length === 2) {
+        max = height[i] * height[j]
+        return max
+    }
+
+
     while (i < j){
         area = (j-1) * Math.min(height[i], height[j])
         max = Math.max(area, max)
@@ -25,6 +31,6 @@ var maxArea = function(height){
 };
 
 console.log(height2)
-console.log(maxArea(height3))
 console.log(maxArea(height2))
+console.log(maxArea(height3))
 
